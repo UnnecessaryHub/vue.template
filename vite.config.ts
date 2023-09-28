@@ -6,5 +6,10 @@ export default defineConfig({
   plugins: [vue(), tsconfigPaths()],
   server: {
     port: 3000
+  },
+  resolve: {
+    alias: {
+      '@/': `${resolve(__dirname, 'src')}/`
+    }
   }
 })
